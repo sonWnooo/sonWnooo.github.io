@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>寻一抹蓝 · 蝴蝶枫叶小游戏</title>
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #d8cebb; }
+  canvas { display: block; }
+  @media (pointer:fine) {
+    html, body, body * { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%23b4e5ff'/%3E%3C/svg%3E") 16 16, crosshair !important; }
+  }
+  #app { position: fixed; inset: 0; }
+  #hint { display:none;
+    position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%);
+    font: 12px/1 "Segoe UI", "Microsoft YaHei", sans-serif; letter-spacing: .12em;
+    color: #8a8070; background: rgba(255,252,244,.6); border: 1px solid rgba(120,100,70,.16);
+    padding: 8px 18px; border-radius: 20px; pointer-events: none;
+    transition: opacity 1.6s ease; backdrop-filter: blur(3px);
+  }
+  #hint.fade { opacity: 0; }
+  /* 纸感颗粒 + 暗角（极轻，统一插画的纸面质感） */
+  #paper {
+    position: fixed; inset: 0; pointer-events: none; z-index: 5;
+    background:
+      radial-gradient(ellipse at center, rgba(0,0,0,0) 58%, rgba(96,78,52,.14) 100%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+    opacity: .18;
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="paper"></div>
+<div id="hint">移动鼠标控制蝴蝶 · W A S D / 方向键</div>
+<script>
+  window.__errs = [];
+  window.addEventListener('error', e => window.__errs.push((e.message || String(e)).slice(0, 200) + ' @' + (e.filename || '').split('/').pop() + ':' + e.lineno));
+  window.addEventListener('unhandledrejection', e => window.__errs.push('REJ: ' + String(e.reason).slice(0, 200)));
+  const _warn = console.warn.bind(console);
+  console.warn = function () {
+    window.__errs.push('WARN: ' + Array.from(arguments).map(a => String(a).slice(0, 160)).join(' | '));
+    _warn.apply(console, arguments);
+  };
+  const _err = console.error.bind(console);
+  console.error = function () {
+    window.__errs.push('CERR: ' + Array.from(arguments).map(a => String(a).slice(0, 160)).join(' | '));
+    _err.apply(console, arguments);
+  };
+</script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "./js/three.module.js?v=165",
+    "vue": "./js/vendor/vue.esm-browser.prod.js",
+    "vue-demi": "./js/vendor/vue-demi.mjs",
+    "@vueuse/shared": "./js/vendor/vueuse-shared.mjs",
+    "@vueuse/core": "./js/vendor/vueuse-core.mjs",
+    "@tresjs/core": "./js/vendor/tres-core.mjs"
+  }
+}
+</script>
+<script type="module" src="./js/main.js?v=12-tree-hud"></script>
+<script>
+  setTimeout(() => document.getElementById('hint').classList.add('fade'), 7000);
+</script>
+</body>
+</html>

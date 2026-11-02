@@ -1,0 +1,58 @@
+[
+  {
+    "state": "Stand",
+    "source": "D:\\《1秒》\\1s人物建模\\Stand.fbx",
+    "source_action": "Armature|mixamo.com|Layer0",
+    "clip": "Stand",
+    "duration_seconds": 8.366666666666667,
+    "glb": "D:\\《1秒》\\public\\assets\\animations\\Stand.glb",
+    "frames": [
+      1.0,
+      251.0
+    ],
+    "fps": 30,
+    "bones": 65
+  },
+  {
+    "state": "Walk",
+    "source": "D:\\《1秒》\\1s人物建模\\Walk.fbx",
+    "source_action": "Armature|mixamo.com|Layer0",
+    "clip": "Walk",
+    "duration_seconds": 1.0333333333333334,
+    "glb": "D:\\《1秒》\\public\\assets\\animations\\Walk.glb",
+    "frames": [
+      1.0,
+      31.0
+    ],
+    "fps": 30,
+    "bones": 65
+  },
+  {
+    "state": "Run",
+    "source": "D:\\《1秒》\\1s人物建模\\Running.fbx",
+    "source_action": "Armature|mixamo.com|Layer0",
+    "clip": "Run",
+    "duration_seconds": 0.7333333333333333,
+    "glb": "D:\\《1秒》\\public\\assets\\animations\\Run.glb",
+    "frames": [
+      1.0,
+      22.0
+    ],
+    "fps": 30,
+    "bones": 65
+  },
+  {
+    "state": "Jump",
+    "source": "D:\\《1秒》\\1s人物建模\\Jump.fbx",
+    "source_action": "Armature|mixamo.com|Layer0",
+    "clip": "Jump",
+    "duration_seconds": 0.9,
+    "glb": "D:\\《1秒》\\public\\assets\\animations\\Jump.glb",
+    "frames": [
+      1.0,
+      27.0
+    ],
+    "fps": 30,
+    "bones": 65
+  }
+]

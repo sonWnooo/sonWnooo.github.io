@@ -1,0 +1,18 @@
+{
+  "before": {
+    "x": 1.5757119512070603,
+    "z": -0.10018921011269816
+  },
+  "position": {
+    "x": 0.010126141150401897,
+    "z": 0.0674187469259106
+  },
+  "agitation": {
+    "avg": 0.09663870826186169,
+    "count": 1672
+  },
+  "errors": [
+    "WARN: [TresJS ▲ ■ ●] No camera found. Creating a default perspective camera. To have full control over a camera, please add one to the scene."
+  ],
+  "pageErrors": []
+}

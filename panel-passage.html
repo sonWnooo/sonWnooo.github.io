@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>逐片 · 空间拼合</title>
+  <style>html,body{overflow:hidden}#stage{width:100%;height:min(75vh,56.25vw);transform:translateY(-50%);top:45%!important;bottom:auto!important}*{box-sizing:border-box}html,body{color:#dededb;background:#000;width:100%;height:100%;margin:0;font:13px system-ui,Microsoft YaHei,sans-serif}canvas{width:100%;height:100%;display:block}#stage{position:absolute;inset:0}header{pointer-events:none;position:fixed;top:24px;left:28px}h1{letter-spacing:.18em;margin:0;font-size:15px;font-weight:500}header p{color:#838581;letter-spacing:.1em;margin-top:8px;font-size:11px}.controls{backdrop-filter:blur(12px);background:#121412d9;border:1px solid #333831;border-radius:12px;width:min(720px,100% - 32px);padding:14px 18px;position:fixed;bottom:24px;left:50%;transform:translate(-50%)}.row{align-items:center;gap:14px;display:flex}.row+.row{margin-top:13px}button,select{color:#ddd;font:inherit;cursor:pointer;background:0 0;border:1px solid #454b42;border-radius:5px;padding:7px 12px}button:hover{background:#2c3229}input[type=range]{accent-color:#c8d3bb;cursor:pointer;min-width:0}#timeline{flex:1}output{font-variant-numeric:tabular-nums;color:#a7b09f;white-space:nowrap;font-size:11px}label{color:#a7b09f;align-items:center;gap:8px;font-size:11px;display:flex}.row:last-child{justify-content:space-between}#irregularity{width:110px}select{padding:5px 8px;font-size:11px}#status{color:#ffbdb4;position:fixed;top:90px;left:28px}#status:empty{display:none}@media (width<=520px){header{top:18px;left:18px}.controls{padding:12px;bottom:14px}.row{gap:9px}button{padding:7px 9px}#irregularity{width:74px}header p{max-width:240px;line-height:1.8}}</style>
+  <script type="module" crossorigin src="/assets/panel-passage-owL_wa5U.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/three.core-DtjtRha-.js">
+  <link rel="modulepreload" crossorigin href="/assets/three.module-Dcn-FwEC.js">
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="modulepreload" crossorigin href="/assets/click-ripple-EkDy_qkE.js">
+</head>
+<body>
+  <div id="stage"></div>
+  <header><h1>逐片 / 空间拼合</h1><p>路面贴地 · 两侧跟随视角拼入</p></header>
+  <div id="status" role="status"></div>
+  <section class="controls" aria-label="动画控制">
+    <div class="row"><button id="play" aria-label="暂停动画">暂停</button><button id="restart">重播</button><input id="timeline" aria-label="动画时间" type="range" min="0" max="11.65" step="0.01" value="0"><output id="time">0.00 / 11.65s</output></div>
+    <div class="row"><label>错落程度 <input id="irregularity" type="range" min="0" max="1.5" step="0.05" value="1"><output id="amount">100%</output></label><label>速度 <select id="speed"><option value="0.5">0.5×</option><option value="0.75">0.75×</option><option value="1" selected>1×</option></select></label><button id="fullscreen">全屏</button></div>
+    <div class="row"><label><input id="road-only" type="checkbox">仅看路面</label><label><input id="compare-source" type="checkbox">原片对照（青色标出方块）</label></div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "colorAndBrightness": true,
+  "persistence": true,
+  "off": {
+    "airborne": 69,
+    "halos": 0,
+    "uniformBrightness": 0,
+    "uniformColor": "#77aaff"
+  },
+  "on": {
+    "airborne": 89,
+    "halos": 85,
+    "uniformBrightness": 3.2,
+    "uniformColor": "#ffbd45"
+  },
+  "pageErrors": []
+}

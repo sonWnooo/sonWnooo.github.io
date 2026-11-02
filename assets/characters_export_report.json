@@ -1,0 +1,22 @@
+{
+  "source": "D:\\《1秒》\\assets\\source\\OneSecond_CozyRoom_with_characters.blend",
+  "source_sha256": "16026c18832057ca18120c0f2c183a2a7d97d987706894a4879e45705c211369",
+  "assets": [
+    {
+      "id": "PLAYER_001",
+      "file": "D:\\《1秒》\\public\\assets\\PLAYER_001.glb",
+      "bytes": 7432388,
+      "bones": 65,
+      "vertices": 25316,
+      "max_skin_influences": 6
+    },
+    {
+      "id": "DOG_001",
+      "file": "D:\\《1秒》\\public\\assets\\DOG_001.glb",
+      "bytes": 6132492,
+      "bones": 33,
+      "vertices": 19819,
+      "max_skin_influences": 8
+    }
+  ]
+}

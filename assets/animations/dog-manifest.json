@@ -1,0 +1,30 @@
+[
+  {
+    "state": "DOG_Stand",
+    "source": "D:\\《1秒》\\1s小狗建模卡通效果\\stand.fbx",
+    "source_action": "Armature|mixamo.com|Layer0",
+    "clip": "DOG_Stand",
+    "duration_seconds": 1.9666666666666666,
+    "glb": "D:\\《1秒》\\public\\assets\\animations\\DOG_Stand.glb",
+    "frames": [
+      1.0,
+      59.0
+    ],
+    "fps": 30,
+    "bones": 33
+  },
+  {
+    "state": "DOG_Walk",
+    "source": "D:\\《1秒》\\1s小狗建模卡通效果\\Walk (1).fbx",
+    "source_action": "Armature|mixamo.com|Layer0",
+    "clip": "DOG_Walk",
+    "duration_seconds": 1.0333333333333334,
+    "glb": "D:\\《1秒》\\public\\assets\\animations\\DOG_Walk.glb",
+    "frames": [
+      1.0,
+      31.0
+    ],
+    "fps": 30,
+    "bones": 33
+  }
+]
